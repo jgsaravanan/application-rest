@@ -1,0 +1,44 @@
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <label class="col-md-3" style="text-align: center">Name</label>
+      <input class="col-md-3" type="text"/>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-6">
+      <label class="col-md-3" style="text-align: center">Department</label>
+      <select class="col-md-3" placeholder="Department" name="department">
+        <option [value]="'ECE'">ECE</option>
+        <option [value]="'CSE'">CSE</option>
+        <option [value]="'IT'">IT</option>
+        <option [value]="'MECH'">MECH</option>
+      </select>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-6">
+      <label class="col-md-3" style="text-align: center">DOJ</label>
+      <input class="col-md-3" [matDatepicker]="year" placeholder="Date of Join"/>
+      <mat-datepicker-toggle matSuffix [for]="year"></mat-datepicker-toggle>
+      <mat-datepicker #year></mat-datepicker>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-6">
+        <label class="col-md-3" style="text-align: center">DOB</label>
+        <input class="col-md-3" [matDatepicker]="myDatePicker" placeholder="Date of Birth"/>
+        <mat-datepicker-toggle matSuffix [for]="myDatePicker"></mat-datepicker-toggle>
+        <mat-datepicker #myDatePicker></mat-datepicker>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <span class="col-md-2" style="width: 50%"></span>
+    <button mat-button style="background-color: green">Save</button>
+  </div>
+</div>
